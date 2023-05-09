@@ -1,28 +1,7 @@
 import React, { useState } from "react";
-import { login } from "./firebase";
+import { firbase } from "./firebase";
+import { addDoc, collection } from "@firebase/firestore"
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-
-// export default function login(){
-//   let auth = getAuth()
-//   const [data, setData] = useState({});
-
-//   const handleInput = (event) => {
-//     let newInput = { [event.target.name]: event.target.value };
-
-//     setData({...data, ...newInput });
-//   };
-
-//   const handleSubmit = () => {
-//     createUserWithEmailAndPassword(auth, data.email, data.password )
-//     .then((response) => {
-//       console.log(response.user)
-//     })
-//     .catch((err) => {
-//       alert(err.message);
-//     });
-//   };
-   
-// }
 
 
 function LoginPage() {

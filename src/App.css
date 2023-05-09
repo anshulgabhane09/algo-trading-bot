@@ -72,6 +72,7 @@ nav {
 }
 .heading-home {
     padding-top: 20px;
+    padding-left:35px;
     color: rgb(254,158,13);
     font-size: 330%;
 }
@@ -151,7 +152,7 @@ nav {
 }
 
 .login-button:hover {
-  background-color: #000000;
+  background-color: black;
   color: #fe9e0d;
 }
 .Signup-button:hover {
@@ -221,9 +222,14 @@ nav {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   text-decoration: none ;
 }
+
+.login-options {
+  text-decoration: none;
+}
 .login-options a {
   text-decoration: none;
 }
+
 .Signup-container {
   max-width: 500px;
   margin: 50px auto;
@@ -729,11 +735,48 @@ button[type="submit"]:hover {
    color: #fe9e0d;
    text-align: left;
    padding: 0px 50px 5px 0px;
-   text-align: center;
+   text-align: left;
    position: sticky;
    top: 0;
 }
 
 .dashboard-container {
-    background: linear-gradient(to bottom right, #FFFFFF, #fe9e0d);
+    background: linear-gradient(to bottom left, #FFFFFF, #fe9e0d);
+}
+.dashboard-nav {
+  background: linear-gradient(to top, #FFFFFF, #f8b44d);
+}
+.dashboard-nav-logo-container {
+  text-decoration: none;
+}
+.dashboard-nav-logo-container a{
+  text-decoration: none;
+}
+
+.dashboard-navbar-menu-container {
+  display: none;
+}
+.dashboard-navbar-links-container a {
+  margin-right: 4rem;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.dashboard-navbar-links-container a:hover {
+  color: #fe9e0d;
+}
+
+.dashboard-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 90px;
+}
+
+.deshboard {
+  min-height: 100vh;
+  width: 85vw;
+  max-width: 1900px;
+  margin: 0rem auto;
 }

@@ -1,11 +1,22 @@
 import time
+from kiteconnect import KiteConnect
 from kite_trade import *
+import datetime
 
-enctoken = "mvZssIKzhD99wBZt+u0x7jmpWY1BJhBYbLSEOoTj4Xsqnk4/roZRwDT3bTu3nbfBDeYP+1YMuGhZ+lnEWvSUxIYIZjXfUQXFA+FoG/Zl9fjCjJqjnZuWqQ=="
+# Initialize KiteApp and get the historical data
+enctoken = "4TyzqbUWH66CAygwdh06C9QirUzc9GyKKI8AaV5KIPrUPgDNV1990pK8voTxRbS7jORATV6rXkIO2NNfi4aIoPITvRb/Isc6y3iUA8HwI0rgM5bhyOBaow=="
 kite = KiteApp(enctoken=enctoken)
 
-while(True):
-     print(kite.ltp("NSE:RELIANCE"))
-     print(kite.ltp(["NSE:NIFTY 50", "NSE:NIFTY BANK"]))
-     print("\n\n")
-     time.sleep(2);
+# Get Historical Data
+import datetime
+instrument_token = 9604354
+from_datetime = datetime.datetime.now() - datetime.timedelta(days=30)     # From last & days
+to_datetime = datetime.datetime.now()
+interval = "5minute"
+print("\n\n")
+print(kite.historical_data(instrument_token, from_datetime, to_datetime, interval, continuous=False, oi=False))
+print("\n\n")
+
+
+
+

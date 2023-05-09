@@ -10,6 +10,7 @@ import Performance from "./Components/pages/performance";
 import Logout from "./Components/pages/logout";
 import Account from "./Components/pages/account";
 import Deshboard from "./Components/deshboard";
+import Home from "./Components/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
     path: "/deshboard",
     element: <Deshboard />,
   },
+  {
+    path: "/home",
+    element: <Home />
+  }
 ]); 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

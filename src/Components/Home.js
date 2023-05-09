@@ -23,11 +23,7 @@ const Home = () => {
             efficiency, real-time analysis, customizable strategies, and minimal
             time investment.
           </p>
-          {/* <a href="/login" className="loginlink">
-            <button  className="login-button">
-              Login <FiArrowRight />{" "}
-            </button>
-          </a> */}
+
           <Link
             to="login-container"
             spy={true}
