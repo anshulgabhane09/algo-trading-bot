@@ -1,64 +1,144 @@
-import React from 'react';
-// import './Account.css'; // Import the CSS file
+// import React, { useState } from "react";
+// import { Link } from "react-scroll";
+// import { HiOutlineBars3 } from "react-icons/hi2";
+// import Box from "@mui/material/Box";
+// import Drawer from "@mui/material/Drawer";
+// import List from "@mui/material/List";
+// import Divider from "@mui/material/Divider";
+// import ListItem from "@mui/material/ListItem";
+// import ListItemButton from "@mui/material/ListItemButton";
+// import ListItemIcon from "@mui/material/ListItemIcon";
+// import ListItemText from "@mui/material/ListItemText";
+// import HomeIcon from "@mui/icons-material/Home";
+// import InfoIcon from "@mui/icons-material/Info";
+// import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
+// import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
+// import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
 
-const Account = () => {
-  // Replace these with actual user data
-  const accountBalance = "$10,000";
-  const accountType = "Gold";
-  const tradingHistory = [
-    {
-      date: "05/01/2023",
-      symbol: "AAPL",
-      type: "Buy",
-      quantity: 100,
-      price: "$150.00"
-    },
-    {
-      date: "05/02/2023",
-      symbol: "GOOGL",
-      type: "Sell",
-      quantity: 50,
-      price: "$200.00"
-    },
-    {
-      date: "05/03/2023",
-      symbol: "AMZN",
-      type: "Buy",
-      quantity: 75,
-      price: "$1800.00"
-    }
-  ];
+// const Navbar = () => {
+//   const [openMenu, setOpenMenu] = useState(false);
+//   const menuOptions = [
+//     {
+//       text: "Home",
+//       icon: <HomeIcon />,
+//     },
+//     {
+//       text: "About",
+//       icon: <InfoIcon />,
+//     },
+//     {
+//       text: "Testimonials",
+//       icon: <CommentRoundedIcon />,
+//     },
+//     {
+//       text: "Contact",
+//       icon: <PhoneRoundedIcon />,
+//     },
+//     {
+//       text: "Cart",
+//       icon: <ShoppingCartRoundedIcon />,
+//     },
+//   ];
 
-  return (
-    <div className="account-container">
-      <h2 className="account-heading">Account Information</h2>
-      <p><strong>Account Balance:</strong> {accountBalance}</p>
-      <p><strong>Account Type:</strong> {accountType}</p>
-      <h3 className="history-heading">Trading History</h3>
-      <table className="history-table">
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Symbol</th>
-            <th>Type</th>
-            <th>Quantity</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          {tradingHistory.map((trade, index) => (
-            <tr key={index}>
-              <td>{trade.date}</td>
-              <td>{trade.symbol}</td>
-              <td>{trade.type}</td>
-              <td>{trade.quantity}</td>
-              <td>{trade.price}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-};
+//   function AccountPage() {
+//     const [email, setEmail] = useState('example@email.com');
+//     const [password, setPassword] = useState('');
+//     const [newEmail, setNewEmail] = useState('');
+  
+//     const handleEmailChange = (event) => {
+//       setNewEmail(event.target.value);
+//     }
+  
+//     const handlePasswordChange = (event) => {
+//       setPassword(event.target.value);
+//     }
+  
+//     const handleUpdateEmail = (event) => {
+//       event.preventDefault();
+//       setEmail(newEmail);
+//       setNewEmail('');
+//     }
+  
+//     const handleEditPassword = (event) => {
+//       event.preventDefault();
+//       // TODO: Implement password editing functionality
+//     }
+//   }
+  
+//   return (
+//     <div>
+//       <div className="dashboard-nav">
+//         <div className="dashboard-nav-logo-container">
+//           <a href="/">
+//             <h1 className="heading-home">Algo TradeX</h1>
+//           </a>
+//         </div>
 
-export default Account;
+//         <div className="dashboard-navbar-links-container">
+//           <a href="/strategies">Strategies</a>
+//           <a href="/performance">Performance</a>
+//           <a href="/account">Account</a>
+//           <a href="/">
+//             <button className="logout-button">Logout</button>
+//           </a>
+//         </div>
+//         <div className="dashboard-navbar-menu-container">
+//           <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
+//         </div>
+//         <Drawer
+//           open={openMenu}
+//           onClose={() => setOpenMenu(false)}
+//           anchor="right"
+//         >
+//           <Box
+//             sx={{ width: 250 }}
+//             role="presentation"
+//             onClick={() => setOpenMenu(false)}
+//             onKeyDown={() => setOpenMenu(false)}
+//           >
+//             <List>
+//               {menuOptions.map((item) => (
+//                 <ListItem key={item.text} disablePadding>
+//                   <ListItemButton>
+//                     <ListItemIcon>{item.icon}</ListItemIcon>
+//                     <ListItemText primary={item.text} />
+//                   </ListItemButton>
+//                 </ListItem>
+//               ))}
+//             </List>
+//             <Divider />
+//           </Box>
+//         </Drawer>
+//       </div>
+
+//       <div>
+//       <h1>Account Page</h1>
+//       <p>User Name: John Doe</p>
+//       <p>Email ID: {email}</p>
+//       <form onSubmit={handleUpdateEmail}>
+//         <label htmlFor="new-email">Update Email:</label>
+//         <input
+//           type="email"
+//           id="new-email"
+//           value={newEmail}
+//           onChange={handleEmailChange}
+//         />
+//         <button type="submit">Save</button>
+//       </form>
+//       <form onSubmit={handleEditPassword}>
+//         <label htmlFor="new-password">Edit Password:</label>
+//         <input
+//           type="password"
+//           id="new-password"
+//           value={password}
+//           onChange={handlePasswordChange}
+//         />
+//         <button type="submit">Save</button>
+//       </form>
+//     </div>
+//       <div>hello this is Accounts</div>
+//     </div>
+//   );
+// };
+
+// export default Navbar;

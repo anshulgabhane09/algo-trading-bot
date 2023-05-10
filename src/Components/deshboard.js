@@ -51,9 +51,9 @@ const Navbar = () => {
       <div className="dashboard-navbar-links-container">
         <a href="/strategies">Strategies</a>
         <a href="/performance">Performance</a>
-        <a href="/positions">Positions</a>
+        <a href="/account">Account</a>
         <a href="/">
-          <button className="register-button">Logout</button>
+          <button className="logout-button">Logout</button>
         </a>
       </div>
       <div className="dashboard-navbar-menu-container">

@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { HiOutlineBars3 } from "react-icons/hi2";
@@ -41,44 +40,53 @@ const Navbar = () => {
     },
   ];
   return (
-    <div className="dashboard-nav">
-      <div className="dashboard-nav-logo-container">
-        <a href="/">
-          <h1 className="heading-home">Algo TradeX</h1>
-        </a>
-      </div>
+    <div>
+      <div className="dashboard-nav">
+        <div className="dashboard-nav-logo-container">
+          <a href="/">
+            <h1 className="heading-home">Algo TradeX</h1>
+          </a>
+        </div>
 
-      <div className="dashboard-navbar-links-container">
-        <a href="">Strategies</a>
-        <a href="">Performance</a>
-        <a href="">Positions</a>
-        <a href="/">
-          <button className="register-button">Logout</button>
-        </a>
-      </div>
-      <div className="dashboard-navbar-menu-container">
-        <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
-      </div>
-      <Drawer open={openMenu} onClose={() => setOpenMenu(false)} anchor="right">
-        <Box
-          sx={{ width: 250 }}
-          role="presentation"
-          onClick={() => setOpenMenu(false)}
-          onKeyDown={() => setOpenMenu(false)}
+        <div className="dashboard-navbar-links-container">
+          <a href="/strategies">Strategies</a>
+          <a href="/performance">Performance</a>
+          <a href="/account">Account</a>
+          <a href="/">
+            <button className="logout-button">Logout</button>
+          </a>
+        </div>
+        <div className="dashboard-navbar-menu-container">
+          <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
+        </div>
+        <Drawer
+          open={openMenu}
+          onClose={() => setOpenMenu(false)}
+          anchor="right"
         >
-          <List>
-            {menuOptions.map((item) => (
-              <ListItem key={item.text} disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>{item.icon}</ListItemIcon>
-                  <ListItemText primary={item.text} />
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List>
-          <Divider />
-        </Box>
-      </Drawer>
+          <Box
+            sx={{ width: 250 }}
+            role="presentation"
+            onClick={() => setOpenMenu(false)}
+            onKeyDown={() => setOpenMenu(false)}
+          >
+            <List>
+              {menuOptions.map((item) => (
+                <ListItem key={item.text} disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon>{item.icon}</ListItemIcon>
+                    <ListItemText primary={item.text} />
+                  </ListItemButton>
+                </ListItem>
+              ))}
+            </List>
+            <Divider />
+          </Box>
+        </Drawer>
+      </div>
+      <div className="page-heading">
+        <div className="perform-heading">Performance</div>
+      </div>
     </div>
   );
 };

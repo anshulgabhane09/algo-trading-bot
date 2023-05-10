@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { Link } from "react-router-dom"
+
 import { getauth, createUserWithEmailAndPassword } from "firebase/auth";
 
 import { Link } from "react-router-dom";
@@ -66,7 +66,7 @@ function FormValidator() {
         </div>
 
         <button type="submit">
-          <Link to="/deshboard">Submit</Link>
+          <Link to="/strategies">Submit</Link>
         </button>
       </form>
     </div>

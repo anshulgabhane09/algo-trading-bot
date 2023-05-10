@@ -740,12 +740,16 @@ button[type="submit"]:hover {
    top: 0;
 }
 
-.dashboard-container {
-    background: linear-gradient(to bottom left, #FFFFFF, #fe9e0d);
-}
 .dashboard-nav {
-  background: linear-gradient(to top, #FFFFFF, #f8b44d);
+  /* background: linear-gradient(to top, #FFFFFF, #f8b44d); */
+  max-width: 100%;
+  margin: 0px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  text-decoration: none ;
 }
+
 .dashboard-nav-logo-container {
   text-decoration: none;
 }
@@ -779,4 +783,74 @@ button[type="submit"]:hover {
   width: 85vw;
   max-width: 1900px;
   margin: 0rem auto;
+}
+.logout-button {
+  padding: 0.9rem 1.75rem;
+  background-color: #fe9e0d;
+  color: #FFFFFF;
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.logout-button:hover {
+  background-color: #000000;
+  color: rgb(254,158,13)
+}
+/* STRATEGIES */
+.page-heading {
+  color: rgb(254,158,13);
+  font-family: 'Open Sans';
+  font-weight: bold;
+  font-size: 200%;
+  text-align: center;
+  padding: 50px;
+}
+
+.strategies-table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: white;
+}
+
+table th,
+table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #fe9e0d;
+}
+
+table th {
+  background-color: #fe9e0d;
+}
+
+table tr:hover {
+  background-color: #ffd79b;
+}
+.table-button {
+  padding: 8px 12px;
+  background-color: #000000a8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.table-button:hover {
+  background-color: #000000;
+  color: #fe9e0d;
+}
+
+.strat-body {
+  background-color: #ffffff;
+}
+
+.blank {
+  padding-bottom: 300px;
 }
