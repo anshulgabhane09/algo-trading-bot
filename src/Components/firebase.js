@@ -16,7 +16,3 @@ const firebaseConfig = {
 
 // const appp = initializeApp(firebaseConfig);
 // const firestore = getFirestore(appp);
-
-
-
-// harsh 
