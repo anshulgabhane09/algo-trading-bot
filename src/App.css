@@ -854,3 +854,9 @@ table tr:hover {
 .blank {
   padding-bottom: 300px;
 }
+
+.chart-heading{
+  color: rgb(254,158,13);
+  text-align: center;
+  text-decoration: underline;
+}
